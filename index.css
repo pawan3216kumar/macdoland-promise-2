@@ -1,0 +1,26 @@
+#name>input{
+    height: 40px;
+    width: 40px;
+}
+
+button{
+    height: 50px;
+    width: 100px;
+    background-color: blueviolet;
+
+}
+
+#name{
+    display: grid;
+}
+
+div{
+    border: 2px solid black;
+    height: 200px;
+    width: 70%;
+    margin: auto;
+}
+
+body{
+    background-color: aqua;
+}

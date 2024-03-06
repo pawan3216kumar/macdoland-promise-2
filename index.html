@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <button id="orderbutton" onclick="placeOrder()"> Order Food</button>
+    <form>
+        <input type="checkbox" id="burger" name="food" value="burger">
+        <label for="burger">burger</label><br>
+        <input type="checkbox" id="franqui" name="food" value="franqui">
+        <label for="franqui">franqui</label><br>
+        <input type="checkbox" id="biriyani" name="food" value="biriyani">
+        <label for="biriyani">biriyani</label><br>
+        <input type="checkbox" id="biriyani" name="food" value="Momos">
+        <label for="biriyani">biriyani</label><br>
+        <input type="checkbox" id="biriyani" name="food" value="FingerChips">
+        <label for="biriyani">biriyani</label><br>
+        <input type="submit" placeholder="Submit">
+    </form>
+
+    <div>
+        
+
+    </div>
+</body>
+</html>
+<script>
+
+    let form = document.querySelector("form")
+    let name = document.getElementsByName("food")
+
+    let container = document.querySelector("div")
+    form.addEventListener("submit", () => {
+        event.preventDefault()
+        let orderList = []
+        for(let x of name){
+
+        if(x.checked){
+            orderList.push(x.value)
+            }
+      
+
+        }
+        console.log(orderList)
+            setTimeout(() => {
+                let ul = document.createElement("ul")
+                for(let x of orderList){
+                    let li = document.createElement("li")
+                    li.innerText = x
+                    ul.append(li)
+                }
+                container.append(ul)
+            }, 4000)
+
+    })
+
+
+</script>
